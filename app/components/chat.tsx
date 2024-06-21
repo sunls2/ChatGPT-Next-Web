@@ -15,7 +15,6 @@ import ExportIcon from "../icons/share.svg";
 import ReturnIcon from "../icons/return.svg";
 import CopyIcon from "../icons/copy.svg";
 import LoadingIcon from "../icons/three-dots.svg";
-import PromptIcon from "../icons/prompt.svg";
 import MaskIcon from "../icons/mask.svg";
 import MaxIcon from "../icons/max.svg";
 import MinIcon from "../icons/min.svg";
@@ -491,11 +490,11 @@ export function ChatActions(props: {
         }
       />
 
-      <ChatAction
-        onClick={props.showPromptHints}
-        text={Locale.Chat.InputActions.Prompt}
-        icon={<PromptIcon />}
-      />
+      {/*<ChatAction*/}
+      {/*  onClick={props.showPromptHints}*/}
+      {/*  text={Locale.Chat.InputActions.Prompt}*/}
+      {/*  icon={<PromptIcon />}*/}
+      {/*/>*/}
 
       <ChatAction
         onClick={() => {
@@ -665,7 +664,7 @@ function _Chat() {
   // chat commands shortcuts
   const chatCommands = useChatCommand({
     new: () => chatStore.newSession(),
-    newm: () => navigate(Path.NewChat),
+    newm: () => navigate(Path.Masks),
     prev: () => chatStore.nextSession(-1),
     next: () => chatStore.nextSession(1),
     clear: () =>
@@ -1233,6 +1232,7 @@ function _Chat() {
                   <div className={styles["chat-message-item"]}>
                     <Markdown
                       content={message.content}
+                      theme={config.theme}
                       loading={
                         (message.preview || message.streaming) &&
                         message.content.length === 0 &&

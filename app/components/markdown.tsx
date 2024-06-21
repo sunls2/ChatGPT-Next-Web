@@ -156,6 +156,7 @@ export const MarkdownContent = React.memo(_MarkDownContent);
 export function Markdown(
   props: {
     content: string;
+    theme?: string;
     loading?: boolean;
     fontSize?: number;
     parentRef?: RefObject<HTMLDivElement>;
@@ -166,7 +167,7 @@ export function Markdown(
 
   return (
     <div
-      className="markdown-body"
+      className={`markdown-body markdown-body-${props.theme ?? "auto"}`}
       style={{
         fontSize: `${props.fontSize ?? 14}px`,
       }}

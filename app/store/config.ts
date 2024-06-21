@@ -28,18 +28,18 @@ export enum Theme {
 export const DEFAULT_CONFIG = {
   lastUpdate: Date.now(), // timestamp, to merge state
 
-  submitKey: isMacOS() ? SubmitKey.MetaEnter : SubmitKey.CtrlEnter,
-  avatar: "1f603",
+  submitKey: SubmitKey.Enter,
+  avatar: "1f973",
   fontSize: 14,
   theme: Theme.Auto as Theme,
-  tightBorder: !!getClientConfig()?.isApp,
-  sendPreviewBubble: true,
-  enableAutoGenerateTitle: true,
+  tightBorder: true,
+  sendPreviewBubble: false,
+  enableAutoGenerateTitle: false,
   sidebarWidth: DEFAULT_SIDEBAR_WIDTH,
 
-  disablePromptHint: false,
+  disablePromptHint: true,
 
-  dontShowMaskSplashScreen: false, // dont show splash screen when create chat
+  dontShowMaskSplashScreen: true, // dont show splash screen when create chat
   hideBuiltinMasks: false, // dont add builtin masks
 
   customModels: "",
@@ -49,12 +49,12 @@ export const DEFAULT_CONFIG = {
     model: "gpt-3.5-turbo" as ModelType,
     temperature: 0.5,
     top_p: 1,
-    max_tokens: 4000,
+    max_tokens: 16000,
     presence_penalty: 0,
     frequency_penalty: 0,
-    sendMemory: true,
-    historyMessageCount: 4,
-    compressMessageLengthThreshold: 1000,
+    sendMemory: false,
+    historyMessageCount: 32,
+    compressMessageLengthThreshold: 4000,
     enableInjectSystemPrompts: true,
     template: DEFAULT_INPUT_TEMPLATE,
   },

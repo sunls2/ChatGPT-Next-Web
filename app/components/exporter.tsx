@@ -573,6 +573,7 @@ export function ImagePreviewer(props: {
               <div className={styles["body"]}>
                 <Markdown
                   content={m.content}
+                  theme={config.theme}
                   fontSize={config.fontSize}
                   defaultShow
                 />
