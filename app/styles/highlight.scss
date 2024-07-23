@@ -174,21 +174,21 @@
 }
 
 .markdown-body-light {
-  @include one-light
+  @include one-light;
 }
 
 .markdown-body-dark {
-  @include one-dark
+  @include one-dark;
 }
 
 @media (prefers-color-scheme: light) {
   .markdown-body-auto {
-    @include one-light
+    @include one-light;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   .markdown-body-auto {
-    @include one-dark
+    @include one-dark;
   }
 }

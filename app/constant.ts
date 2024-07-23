@@ -77,8 +77,7 @@ export const Azure = {
 
 export const DEFAULT_INPUT_TEMPLATE = `{{input}}`; // input / time / model / lang
 export const DEFAULT_SYSTEM_TEMPLATE = `
-You are ChatGPT, a large language model trained by OpenAI.
-Current model: {{model}}
+You are an AI assistant, your duty is to provide accurate and rigorous answers. When encountering questions that cannot be handled, you need to clearly inform and guide the user to propose new questions.
 Current time: {{time}}
 Latex inline: $x^2$ 
 Latex block: $$e=mc^2$$
@@ -92,55 +91,19 @@ export const DEFAULT_MODELS = [
     available: true,
   },
   {
-    name: "gpt-4-0314",
-    available: true,
-  },
-  {
-    name: "gpt-4-0613",
-    available: true,
-  },
-  {
-    name: "gpt-4-32k",
-    available: true,
-  },
-  {
-    name: "gpt-4-32k-0314",
-    available: true,
-  },
-  {
-    name: "gpt-4-32k-0613",
-    available: true,
-  },
-  {
-    name: "gpt-4-1106-preview",
-    available: true,
-  },
-  {
-    name: "gpt-4-vision-preview",
-    available: true,
-  },
-  {
     name: "gpt-3.5-turbo",
     available: true,
   },
   {
-    name: "gpt-3.5-turbo-0301",
+    name: "claude-3-5-sonnet",
     available: true,
   },
   {
-    name: "gpt-3.5-turbo-0613",
+    name: "gemini-1.5-pro",
     available: true,
   },
   {
-    name: "gpt-3.5-turbo-1106",
-    available: true,
-  },
-  {
-    name: "gpt-3.5-turbo-16k",
-    available: true,
-  },
-  {
-    name: "gpt-3.5-turbo-16k-0613",
+    name: "gemini-1.5-flash",
     available: true,
   },
 ] as const;
